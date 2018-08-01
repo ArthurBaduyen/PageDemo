@@ -190,6 +190,7 @@ function openModal(elem){
 
 
 // Clinical Pathway ------------------------------------------------------------
+$('.clinical-pathway-details').slideUp()
 
 // Open Details
 $(".clinical-pathway-basic-content").on("click",function(){
