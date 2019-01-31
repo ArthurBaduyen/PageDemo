@@ -3,6 +3,7 @@
 	border-radius: 4px;
 	font-weight: $global-weight-bold;
 	text-transform: uppercase;
+	// line-height: 1.25rem;
 	&.clear {
 		border: 0px !important;
 	}
@@ -109,6 +110,9 @@
 		border-width: 1px;
 		font-weight: normal;
 	}
+	&.tiny {
+		font-size: 0.6rem !important;
+	}
 }
 
 @keyframes bounce {
@@ -148,6 +152,12 @@
 		&:only-child,
 		&:last-child {
 			margin-right: 0;
+		}
+	}
+	select {
+		max-width: rem-calc(100);
+		&:only-child {
+			max-width: initial;
 		}
 	}
 	&.small {
@@ -250,12 +260,22 @@
 
 .close-button {
 	position: absolute;
-	top: 1.25rem;
-	right: 1.5rem;
+	width: 2rem;
+	height: 2rem;
+	top: rem-calc(-8);
+	right: rem-calc(-8);
 	color: rgba($white, $W-dividers);
 	transition: all ease-in 0.2s;
+	background: rgba($white, $W-dividers);
+	border-radius: 50%;
+	border: 1px solid rgba($white, $W-dividers);
+	font-size: 1rem;
+	vertical-align: top;
+	line-height: 1em;
+	font-weight: bold;
 	&:hover {
 		color: $text-white;
+		background: $alert-color;
 	}
 }
 

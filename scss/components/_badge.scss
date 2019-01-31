@@ -28,3 +28,54 @@
 	padding: 0.4rem 0.5rem 0.333rem;
 	margin: -3px 0 0;
 }
+
+.tag-cloud {
+	display: inline-block;
+	padding: 0;
+	margin: 5px 0 0;
+	list-style: none;
+	.tag-cloud-individual-tag {
+		@include label;
+		display: inline-block;
+		border-radius: 500px;
+		background: transparent;
+		float: left;
+		color: $primary-color;
+		background: #fff;
+		margin: 3px 1px;
+		font-weight: bold;
+		// border: 1fpx solid $primary-color;
+		.fa {
+			margin: 0 3px;
+			color: $primary-color;
+		}
+		&:hover {
+			color: $white;
+			// background: darken($primary-color, 5%);
+			transition: background-color .2s ease-in;
+			background: darken(#fff, 8%) !important ;
+		}
+	}
+	&.white {
+		.tag-cloud-individual-tag {
+			color: $white;
+			border: 1px solid $white;
+			.fa {
+				color: $white;
+			}
+			&:hover {
+				color: $white;
+				background: darken($primary-color, 25%);
+				transition: background-color .2s ease-in;
+			}
+		}
+	}
+	&.compact {
+		.tag-cloud-individual-tag {
+			font-size: 9px;
+			font-weight: normal;
+			margin: 1px;
+			padding: 2px 5px;
+		}
+	}
+}

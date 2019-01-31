@@ -51,7 +51,12 @@
 
 // Custom Styles
 // Vendor
-@import 'vendor/font-awesome/font-awesome';
+@import 'vendor/fontawesome5/scss/fontawesome';
+@import 'vendor/fontawesome5/scss/solid';
+// @import 'vendor/fontawesome5/scss/regular';
+
+// React Components Override
+@import 'components/react-components-override/_react-select';
 
 // Components
 @import 'components/_mixins';
@@ -85,17 +90,17 @@
 @import 'components/_offcanvas';
 @import 'components/_chat';
 @import 'components/_calendar';
-@import 'components/_reveal';
 @import 'components/_form-builder';
 @import 'components/_orbit';
 @import 'components/_clinical-pathway';
 @import 'components/_pseudo-classes';
-@import 'components/_pseudo-classes';
 @import 'components/_dropdown';
-
+@import 'components/_message';
+@import 'components/_media-queries';
 
 .Select-menu-outer {
   position: relative !important;
+  z-index: 100;
 }
 
 .alertify, .alertify-logs {
